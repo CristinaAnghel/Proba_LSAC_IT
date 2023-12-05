@@ -1,8 +1,10 @@
 import { useState } from "react";
 import "./TestComponent.css"
-import "./login.css"
-import "./register.css"
+//import "./login.css"
+//import "./register.css"
 import { Link } from "react-router-dom"
+import Register from  "../Register/Register"
+import Login from "../Login/Login"
 
 
 export default function TestComponent() {
@@ -132,82 +134,3 @@ export default function TestComponent() {
 	)
 }
 
-/*function App() {
-    const [seen, setSeen] = false
-
-    function togglePop () {
-        setSeen(!seen);
-    };
-
-    return (
-        <div>
-            <button onClick={togglePop}>Login</button>
-            {seen ? <Login toggle={togglePop} /> : null}
-        </div>
-    )
-}*/
-
-
-function Login(props) {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-
-    function handleLogin(e) {
-        e.preventDefault()
-        // Code to handle login goes here
-        props.toggle()
-    }
-
-    return (
-        <div className="popup-log">
-            <div className="popup-inner-log">
-				<button type="close-log" onClick={props.toggle}>X</button>
-                <h2>Login</h2>
-                <form onSubmit={handleLogin}>
-                    <label>
-                        <input type="text" value={email} onChange={e => setEmail(e.target.value)} placeholder="Email" />
-                    </label>
-                    <label>
-                        <input type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="Password" />
-                    </label>
-                    <button type="submit-log">Login</button>
-                </form>
-                
-            </div>
-        </div>
-    )
-}
-
-function Register(props) {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const [confpass, setConfirmPassword] = useState("");
-
-    function handleRegister(e) {
-        e.preventDefault()
-        // Code to handle login goes here
-        props.toggle()
-    }
-
-    return (
-        <div className="popup-reg">
-            <div className="popup-inner-reg">
-				<button type="close-reg" onClick={props.toggle}>X</button>
-                <h2>Register</h2>
-                <form onSubmit={handleRegister} method="POST">
-                    <label>
-                        <input type="text" value={email} onChange={e => setEmail(e.target.value)} placeholder="Email"/>
-                    </label>
-                    <label>
-                        <input type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="Password" />
-                    </label>
-					<label>
-                        <input type="password" value={confpass} onChange={e => setConfirmPassword(e.target.value)} placeholder="Confirm Password"/>
-                    </label>
-                    <button type="submit-reg">Create account</button>
-                </form>
-                
-            </div>
-        </div>
-    )
-}
