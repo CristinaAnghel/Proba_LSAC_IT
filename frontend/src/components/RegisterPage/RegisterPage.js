@@ -1,10 +1,11 @@
 import { useState } from "react";
-import "../TestComponent/TestComponent.css"
+import "./RegisterPage.css"
 //import "./login.css"
 //import "./register.css"
 import { Link } from "react-router-dom"
-import Register from  "../Register/Register"
-import Login from "../Login/Login"
+//import Register from  "../Register/Register"
+//import Login from "../Login/Login"
+import CreatePoll from "../CreatePoll/CreatePoll";
 
 
 export default function RegisterPage() {
@@ -41,7 +42,7 @@ export default function RegisterPage() {
 				<p>și dorințele acesteia.</p>
 				
 			</div>
-            
+            <div className="testoasa"></div>
             <div>
                 <button className="StartPoll"></button>
             </div>
@@ -104,13 +105,13 @@ export default function RegisterPage() {
 			<div>
 				<ul className="navbar">
 					<li><div className="logo"></div></li>
-					<li className="login" >
-						<a className="login-button" onClick={togglePopLogin}>Login</a>
-            			{loginPopVisible ? <Login toggle={togglePopLogin}/> : null}
+					<li className="create-poll" >
+						<a className="create-poll-button" onClick={togglePopLogin}>Create poll</a>
+            			{loginPopVisible ? <CreatePoll toggle={togglePopLogin}/> : null}
 					</li>
-					<li className="register">
-						<a className="register-button" onClick={togglePopRegister}>Register</a>
-						{registerPopVisible ? <Register toggle={togglePopRegister} /> : null}
+					<li className="log-out">
+						<a href='\test'>Log out</a>
+						
 					</li>
 				</ul>
 			</div>
