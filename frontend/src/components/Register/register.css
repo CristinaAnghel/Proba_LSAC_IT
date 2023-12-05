@@ -10,7 +10,7 @@
     }
     
 .popup-inner-reg {
-    background-image: url("E:\Proiect_Lsac_IT\frontend\src\components\TestComponent\Images\login-bg.png");
+    background-image: url("./Images/login-bg.png");
     position: absolute;
     left: 50%;
     top: 50%;
@@ -40,7 +40,7 @@
 .popup-inner-reg label {
     display: block;
     margin-bottom: 10px;
-    background-image: url("E:\Proiect_Lsac_IT\frontend\src\components\TestComponent\Images\comp-login.png");
+    background-image: url("./Images/comp-login.png");
     background-repeat: no-repeat;
     margin-left: 18%;
     background-size: 320px;
@@ -89,7 +89,7 @@
     margin-right: 10px;
     cursor: pointer;
     border-radius: 5px;
-    background-image: url("E:\Proiect_Lsac_IT\frontend\src\components\TestComponent\Images\comp-login.png");
+    background-image: url("./Images/comp-login.png");
     background-repeat: no-repeat;
     width: 150px;
     height: 50px;
@@ -108,7 +108,7 @@
     margin-right: 10px;
     cursor: pointer;
     border-radius: 5px;
-    background-image: url("E:\Proiect_Lsac_IT\frontend\src\components\TestComponent\Images\buton-close.png");
+    background-image: url("./Images/buton-close.png");
     background-repeat: no-repeat;
     background-size: 30px;
     width: 30px;
