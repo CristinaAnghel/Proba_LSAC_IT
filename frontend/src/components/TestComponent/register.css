@@ -1,0 +1,141 @@
+.popup-reg {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    }
+    
+.popup-inner-reg {
+    background-image: url("E:\Proiect_Lsac_IT\frontend\src\components\TestComponent\Images\login-bg.png");
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    
+    width: 491px;
+    height: 522px;
+    background-repeat: no-repeat;
+    background-size: 500px;
+
+}
+    
+.popup-inner-reg h2 {
+    margin-top: 0;
+    width: 80px;
+    height: 50px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
+    font-weight: 200;
+    margin-top: 10px;
+    margin-left: 38%;
+    color: #FFFFFF;
+
+}
+    
+.popup-inner-reg label {
+    display: block;
+    margin-bottom: 10px;
+    background-image: url("E:\Proiect_Lsac_IT\frontend\src\components\TestComponent\Images\comp-login.png");
+    background-repeat: no-repeat;
+    margin-left: 18%;
+    background-size: 320px;
+    width: 300px;
+    height: 60px;
+    border: transparent;
+    padding: 15px;
+    color: #FFFFFF;
+    
+}
+
+.popup-inner-reg input:focus{
+    border: transparent;
+    outline: none;
+}
+  
+
+.popup-inner-reg input {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:#FFFFFF ;
+    width: 315px;
+    margin-left: -3%;
+    margin-top: -7%;
+    /*
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    */
+    border: transparent;
+    font-size: 20px;
+    height: 60px;
+    background-color:transparent;
+}
+
+
+.popup-inner-reg button[type="submit-reg"],
+.popup-inner-reg button[type="button"] {
+    color: #04395E;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 17px;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-image: url("E:\Proiect_Lsac_IT\frontend\src\components\TestComponent\Images\comp-login.png");
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 50px;
+    margin-left: 35%;
+    margin-top: 1px;
+}
+
+.popup-inner-reg button[type="close-reg"],
+.popup-inner-reg button[type="button"] {
+    color: #04395E;
+    font-size: 20px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-image: url("E:\Proiect_Lsac_IT\frontend\src\components\TestComponent\Images\buton-close.png");
+    background-repeat: no-repeat;
+    background-size: 30px;
+    width: 30px;
+    height: 30px;
+    margin-left: 90%;
+    margin-top: 20px;
+}
+    
+
+    
+.popup-inner-reg button[type="button"] {
+    margin-top: 20px;
+    background-color: #f44336;
+}
+    
+.popup-inner-reg button[type="button"]:hover {
+    background-color: #da190b;
+}
+    
+.popup-inner-reg button[type="submit-reg"]:disabled {
+    background-color: #bfbfbf;
+    color: #ffffff;
+    cursor: not-allowed;
+}
+    
+.popup-inner-reg button[type="button"]:disabled {
+    background-color: #bfbfbf;
+    color: #ffffff;
+    cursor: not-allowed;
+}
