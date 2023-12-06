@@ -38,12 +38,4 @@ server.listen(config.port, () => {
     console.log(`listening on localhost:${config.port}`);
 });
 
-//ce plm tre sa fac
-
-const userSchema = new mongoose.Schema({
-    email:'String',
-    password:'String'
-})
-
-const userAuth = new mongoose.model('users', userSchema)
 
