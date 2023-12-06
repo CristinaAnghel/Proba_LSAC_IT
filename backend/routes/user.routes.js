@@ -10,12 +10,13 @@ router.post("/", async (req, res) => {
             password: req.body.password
         });
 
-        
+        /*
         const duplicateUser = await User.findOne({email: user.email});
         if(duplicateUser){
             return res.send({succes: false, message:"User with that email already exists"})
             
         }
+        */
 
         await user.save();
 

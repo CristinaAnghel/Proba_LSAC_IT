@@ -54,44 +54,44 @@ export default function RegisterPage() {
                         <br></br>
                         <text className="Text2">Make a choice:</text>
                         <br></br>
-                        <input type="Radio" className="Options"></input> 
+                        <input type="Radio" name="q1" className="Options"></input> 
                         <text className="OptionsText">Un elefant</text>
                         <br></br>
-                        <input type="Radio" className="Options"></input> 
+                        <input type="Radio" name="q1" className="Options"></input> 
                         <text className="OptionsText">O testoasa</text>
                         <br></br>
-                        <input type="Radio" className="Options"></input>
+                        <input type="Radio" name="q1" className="Options"></input>
                         <text className="OptionsText">Un lenes</text>
                     </li>
                     <li className="PollBox">
                     <br></br>
-                        <text className="Question">Ce animal se afla pe tricourile departamentului de IT?</text>
+                    <text className="Question">Merge acest site?</text>
                         <br></br>
                         <text className="Text2">Make a choice:</text>
                         <br></br>
-                        <input type="Radio" className="Options"></input> 
-                        <text className="OptionsText">Un elefant</text>
+                        <input type="Radio" name="q2" className="Options"></input> 
+                        <text className="OptionsText">Nu</text>
                         <br></br>
-                        <input type="Radio" className="Options"></input> 
-                        <text className="OptionsText">O testoasa</text>
+                        <input type="Radio" name="q2" className="Options"></input> 
+                        <text className="OptionsText">Da</text>
                         <br></br>
-                        <input type="Radio" className="Options"></input>
-                        <text className="OptionsText">Un lenes</text>
+                        <input type="Radio" name="q2" className="Options"></input>
+                        <text className="OptionsText">Se putea mai rau</text>
                     </li>
                     <li className="PollBox">
                     <br></br>
-                        <text className="Question">Ce animal se afla pe tricourile departamentului de IT?</text>
+                    <text className="Question">Ce mai faceti?</text>
                         <br></br>
                         <text className="Text2">Make a choice:</text>
                         <br></br>
-                        <input type="Radio" className="Options"></input> 
-                        <text className="OptionsText">Un elefant</text>
+                        <input type="Radio" name="q3" className="Options"></input> 
+                        <text className="OptionsText">Bine</text>
                         <br></br>
-                        <input type="Radio" className="Options"></input> 
-                        <text className="OptionsText">O testoasa</text>
+                        <input type="Radio" name="q3" className="Options"></input> 
+                        <text className="OptionsText">Rau</text>
                         <br></br>
-                        <input type="Radio" className="Options"></input>
-                        <text className="OptionsText">Un lenes</text>
+                        <input type="Radio" name="q3" className="Options"></input>
+                        <text className="OptionsText">No comment</text>
                     </li>
                     
                     <li className="PollBox"></li>
