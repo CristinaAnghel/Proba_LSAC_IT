@@ -27,6 +27,7 @@ router.post("/", async (req, res) => {
 })
 
 router.get("/", async (req, res) => {
+    /*
     try {
         
         const user = ({
@@ -50,7 +51,7 @@ router.get("/", async (req, res) => {
                 email: user.email,
                 date: user.date
             });
-        }*/
+        }
         console.log(userData);
         return res.send(userData);
         
@@ -59,6 +60,28 @@ router.get("/", async (req, res) => {
 
     }catch(e){
         return res.send({succes: false, message: e.message});
+    }
+    */
+
+    const { email, password } = req.body;
+
+    try {
+        const user = await User.findOne({ email });
+
+        if (!user) {
+            return res.status(401).json({ message: 'User not found' });
+        }
+
+        const isPasswordValid = await compare(password, user.password);
+
+        if (!isPasswordValid) {
+            return res.status(401).json({ message: 'Invalid password' });
+        }
+
+        res.status(200).json({ message: 'Login successful', user });
+    } catch (error) {
+        console.error('Error during login:', error);
+        res.status(500).json({ message: 'Internal Server Error' });
     }
 })
 

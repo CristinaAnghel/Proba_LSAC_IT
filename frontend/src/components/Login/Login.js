@@ -12,6 +12,8 @@ function Login(props) {
 
     const handleLogin = async () => {
         try {
+            //e.preventDefault();
+
             const response = await axios.get('http://localhost:5000/api/user', {
                 email: email,
                 password: password,
