@@ -1,37 +1,17 @@
 import { useState } from "react";
 import "./RegisterPage.css"
-//import "./login.css"
-//import "./register.css"
 import { Link } from "react-router-dom"
-//import Register from  "../Register/Register"
-//import Login from "../Login/Login"
 import CreatePoll from "../CreatePoll/CreatePoll";
 
 
 export default function RegisterPage() {
-	const [seen, setSeen] = useState(false)
-    const [loginPopVisible, setLoginPopVisible] = useState(false);
-    const [registerPopVisible, setRegisterPopVisible] = useState(false);
+    const [createPopVisible, setCreatePopVisible] = useState(false);
 
-    const togglePopLogin = () => {
-        setLoginPopVisible(!loginPopVisible);
-        setRegisterPopVisible(false);
+    const togglePopCreate = () => {
+        setCreatePopVisible(!createPopVisible);
       };
     
-      const togglePopRegister = () => {
-        setRegisterPopVisible(!registerPopVisible);
-        setLoginPopVisible(false);
-      };
-/*
-    function togglePopLogin () {
-        setSeen(!seen);
-    };
 
-    function togglePopRegister () {
-        setSeen(!seen);
-    };
-
-*/
 	return (
 		<div className="screen">
             <div>
@@ -104,15 +84,12 @@ export default function RegisterPage() {
                 </ul>
             </div>
             
-            
-			
-			
 			<div>
 				<ul className="navbar">
 					<li><div className="logo"></div></li>
 					<li className="create-poll" >
-						<a className="create-poll-button" onClick={togglePopLogin}>Create poll</a>
-            			{loginPopVisible ? <CreatePoll toggle={togglePopLogin}/> : null}
+						<a className="create-poll-button" onClick={togglePopCreate}>Create poll</a>
+            			{createPopVisible ? <CreatePoll toggle={togglePopCreate}/> : null}
 					</li>
 					<li className="log-out">
 						<a href='\test'>Log out</a>
@@ -123,11 +100,7 @@ export default function RegisterPage() {
 			<div>
 				
 			</div>
-            
-			
-			
-			
-			
+           
 		</div>
 
 

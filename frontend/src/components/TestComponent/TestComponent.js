@@ -1,14 +1,11 @@
 import { useState } from "react";
 import "./TestComponent.css"
-//import "./login.css"
-//import "./register.css"
 import { Link } from "react-router-dom"
 import Register from  "../Register/Register"
 import Login from "../Login/Login"
 
 
 export default function TestComponent() {
-	const [seen, setSeen] = useState(false)
     const [loginPopVisible, setLoginPopVisible] = useState(false);
     const [registerPopVisible, setRegisterPopVisible] = useState(false);
 
@@ -21,16 +18,7 @@ export default function TestComponent() {
         setRegisterPopVisible(!registerPopVisible);
         setLoginPopVisible(false);
       };
-/*
-    function togglePopLogin () {
-        setSeen(!seen);
-    };
 
-    function togglePopRegister () {
-        setSeen(!seen);
-    };
-
-*/
 	return (
 		<div className="screen">
             <div>
@@ -103,9 +91,6 @@ export default function TestComponent() {
                 </ul>
             </div>
             
-            
-			
-			
 			<div>
 				<ul className="navbar">
 					<li><div className="logo"></div></li>
@@ -122,11 +107,7 @@ export default function TestComponent() {
 			<div>
 				
 			</div>
-            
-			
-			
-			
-			
+       
 		</div>
 
 

@@ -8,35 +8,21 @@ function Login(props) {
     const [password, setPassword] = useState("");
     const [loginStatus, setLoginStatus] = useState(null);
 
-    /*
-    function handleLogin(e) {
-        e.preventDefault()
-        // Code to handle login goes here
-        props.toggle()
-    }
-    */
-
     const navigate = useNavigate();
 
     const handleLogin = async () => {
         try {
-            // Display a loading message or spinner during the registration process
-            //setRegistrationStatus('Registering...');
-
             const response = await axios.get('http://localhost:5000/api/user', {
                 email: email,
                 password: password,
             });
 
-            // Registration successful
             setLoginStatus('Login successful');
             console.log(response.data);
 
-            // Use the navigate function to redirect to the "/home" route
             navigate('/registered');
             
         } catch (error) {
-            // Handle registration failure
             setLoginStatus('Login failed');
             console.error('User not found:', error);
         }

@@ -13,10 +13,6 @@ const pollsRoutes = require("./routes/polls.routes")
 
 const userRoutes = require("./routes/user.routes")
 
-//const deleteRoutes = require('./routes/polls.routes')
-
-//const voteRoutes = require("./routes/polls.routes")
-
 const app = express();
 
 const server = http.createServer(app);
@@ -38,10 +34,6 @@ app.use("/api/polls", pollsRoutes);
 
 app.use("/api/user", userRoutes);
 
-//app.use('/api/polls', deleteRoutes);
-
-//app.use('/api/polls', voteRoutes);
-
 server.listen(config.port, () => {
     console.log(`listening on localhost:${config.port}`);
 });
@@ -55,20 +47,3 @@ const userSchema = new mongoose.Schema({
 
 const userAuth = new mongoose.model('users', userSchema)
 
-/*
-app.get('/', (req, res) => {
-    res.render("")
-})
-
-app.post('/register', async(req, res) => {
-    console.log(req.body)
-    const newUser = userAuth({
-        email:req.body.email,
-        password:req.body.password
-    })
-
-    await  newUser.save()
-    console.log('user saved')
-    res.redirect('/')
-})
-*/

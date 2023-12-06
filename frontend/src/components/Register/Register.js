@@ -9,36 +9,23 @@ function Register(props) {
     const [confpass, setConfirmPassword] = useState("");
     const [registrationStatus, setRegistrationStatus] = useState(null);
 
-    /*
-    function handleRegister(e) {
-        e.preventDefault()
-        // Code to handle login goes here
-        
-        props.toggle()
-    }
-    */
     const navigate = useNavigate();
 
     const handleRegister = async (e) => {
         try {
             e.preventDefault();
-            // Display a loading message or spinner during the registration process
-            //setRegistrationStatus('Registering...');
 
             const response = await axios.post('http://localhost:5000/api/user', {
                 email: email,
                 password: password,
             });
 
-            // Registration successful
             setRegistrationStatus('Registration successful');
             console.log(response.data);
             
-            // Use the navigate function to redirect to the "/home" route
             navigate('/registered');
             
         } catch (error) {
-            // Handle registration failure
             setRegistrationStatus('Registration failed');
             console.error('Error registering user:', error);
         }

@@ -9,18 +9,8 @@ function CreatePoll(props) {
     const [option3, setOption3] = useState("");
     const [pollStatus, setpollStatus] = useState(null);
 
-    /*
-    function handleLogin(e) {
-        e.preventDefault()
-        // Code to handle login goes here
-        props.toggle()
-    }
-    */
-
     const handleCreatePoll = async () => {
         try {
-            // Display a loading message or spinner during the registration process
-            //setRegistrationStatus('Registering...');
 
             const response = await axios.post('http://localhost:5000/api/polls', {
                 question: question,
@@ -29,15 +19,10 @@ function CreatePoll(props) {
                 option3: option3
             });
 
-            // Registration successful
             setpollStatus('Poll creation successful');
             console.log(response.data);
-
-            // Use the navigate function to redirect to the "/home" route
-            //navigate('/registered');
             
         } catch (error) {
-            // Handle registration failure
             setpollStatus('Poll creation failed');
             console.error('Error registering user:', error);
         }
