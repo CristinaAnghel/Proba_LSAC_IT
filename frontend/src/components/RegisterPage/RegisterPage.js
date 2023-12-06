@@ -34,6 +34,13 @@ export default function RegisterPage() {
 */
 	return (
 		<div className="screen">
+            <div>
+				<ul className="footer">
+					<li className="links"><a href="https://www.instagram.com/lsacbucuresti/" target="_blank" className="instagram"></a></li>
+					<li className="links"><a href="https://www.facebook.com/LsacBucuresti/?locale=ro_RO" target="_blank" className="facebook"></a></li>
+					<li className="links"><a href="https://www.twitch.tv/lsac_bucuresti" target="_blank" className="twitch"></a></li>
+				</ul>
+			</div>
             <div className="text-intro">
 				<p>Opiniile sunt mai importante ca niciodată.</p> 
 				<p>Platformele de sondaje permit organizatorilor </p>
@@ -94,8 +101,6 @@ export default function RegisterPage() {
                         <text className="OptionsText">No comment</text>
                     </li>
                     
-                    <li className="PollBox"></li>
-                    <li className="PollBox"></li>
                 </ul>
             </div>
             
@@ -121,13 +126,7 @@ export default function RegisterPage() {
             
 			
 			
-			<div>
-				<ul className="footer">
-					<li className="links"><a href="https://www.instagram.com/lsacbucuresti/" target="_blank" className="instagram"></a></li>
-					<li className="links"><a href="https://www.facebook.com/LsacBucuresti/?locale=ro_RO" target="_blank" className="facebook"></a></li>
-					<li className="links"><a href="https://www.twitch.tv/lsac_bucuresti" target="_blank" className="twitch"></a></li>
-				</ul>
-			</div>
+			
 			
 		</div>
 

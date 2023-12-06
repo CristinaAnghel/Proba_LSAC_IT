@@ -19,8 +19,9 @@ function Register(props) {
     */
     const navigate = useNavigate();
 
-    const handleRegister = async () => {
+    const handleRegister = async (e) => {
         try {
+            e.preventDefault();
             // Display a loading message or spinner during the registration process
             //setRegistrationStatus('Registering...');
 
