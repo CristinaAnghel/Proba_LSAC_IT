@@ -32,7 +32,7 @@ function Register(props) {
             // Registration successful
             setRegistrationStatus('Registration successful');
             console.log(response.data);
-
+            
             // Use the navigate function to redirect to the "/home" route
             navigate('/registered');
             
@@ -49,7 +49,7 @@ function Register(props) {
             <div className="popup-inner-reg">
 				<button type="close-reg" onClick={props.toggle}>X</button>
                 <h2>Register</h2>
-                <form onSubmit={handleRegister} method="POST">
+                <form onSubmit={handleRegister} >
                     <label>
                         <input type="text" value={email} onChange={e => setEmail(e.target.value)} placeholder="Email"/>
                     </label>
